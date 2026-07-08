@@ -16,7 +16,7 @@ const iconMap: Record<string, React.ComponentType<any>> = {
   Sparkles: Sparkles,
 };
 
-const categories = ["Semua", "Operasional", "Bela Negara", "Pengabdian", "Protokoler"];
+const categories = ["Semua", "Operasional", "Bela Negara", "Protokoler"];
 
 export default function ProgramKerja() {
   const [selectedCategory, setSelectedCategory] = useState("Semua");
@@ -32,17 +32,17 @@ export default function ProgramKerja() {
   });
 
   return (
-    <div className="mx-auto max-w-7xl px-6 py-16 sm:px-8 space-y-16">
+    <div className="mx-auto max-w-7xl px-6 py-16 sm:px-8 space-y-16 pt-28">
       {/* 1. Header Section */}
-      <section className="space-y-4 text-center max-w-3xl mx-auto pt-8">
-        <div className="inline-flex items-center gap-2 rounded-full border border-[#C5A880]/30 bg-slate-900/40 px-3.5 py-1.5 text-xs font-semibold tracking-wider text-[#C5A880] uppercase">
-          Agenda Tahunan
+      <section className="space-y-4 text-center max-w-3xl mx-auto">
+        <div className="inline-flex items-center gap-2 rounded-full border border-amber-200/60 bg-amber-50 px-3.5 py-1.5 text-xs font-bold tracking-wider text-[#945f36] uppercase">
+          Agenda Utama
         </div>
-        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl heading-gradient">
-          Program Kerja Satuan 811
+        <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl heading-gradient">
+          Program Kerja SATMENWA 874
         </h1>
-        <p className="text-sm text-slate-400 leading-relaxed">
-          Rencana kegiatan rutin dan strategis yang dijalankan demi kedisiplinan sivitas akademika, pengamanan kegiatan kampus, serta bakti sosial kemasyarakatan.
+        <p className="text-sm text-slate-505 font-medium leading-relaxed">
+          Rencana kegiatan pembinaan mental, kepemimpinan, keprotokolan wisuda, serta pendidikan militer dasar resmi di Politeknik Negeri Malang.
         </p>
       </section>
 
@@ -56,10 +56,10 @@ export default function ProgramKerja() {
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-xl transition duration-300 border cursor-pointer ${
+                className={`px-4 py-2 text-xs font-extrabold uppercase tracking-wider rounded-xl transition duration-300 border cursor-pointer ${
                   selectedCategory === cat
-                    ? "bg-red-950/60 border-red-900 text-[#C5A880] shadow-inner"
-                    : "bg-slate-900/40 border-slate-800 text-slate-400 hover:text-white hover:border-slate-700"
+                    ? "bg-[#945f36] border-[#945f36] text-white shadow-sm"
+                    : "bg-white border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50"
                 }`}
               >
                 {cat}
@@ -69,15 +69,15 @@ export default function ProgramKerja() {
 
           {/* Search box input */}
           <div className="relative max-w-xs w-full">
-            <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-500">
+            <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400">
               <Search className="h-4 w-4" />
             </span>
             <input
               type="text"
-              placeholder="Cari program kerja..."
+              placeholder="Cari agenda kegiatan..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-slate-900/40 border border-slate-800 rounded-xl py-2.5 pl-10 pr-4 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#C5A880]/50 transition duration-300"
+              className="w-full bg-white border border-slate-200 text-slate-900 rounded-xl py-2.5 pl-10 pr-4 text-xs placeholder-slate-400 focus:outline-none focus:border-[#945f36]/50 focus:ring-1 focus:ring-[#945f36]/50 transition duration-300 shadow-sm"
             />
           </div>
 
@@ -87,63 +87,72 @@ export default function ProgramKerja() {
       {/* 3. Programs Grid list */}
       <section className="max-w-6xl mx-auto">
         {filteredPrograms.length > 0 ? (
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {filteredPrograms.map((prog) => {
               const IconComp = iconMap[prog.icon] || ShieldAlert;
               return (
                 <Card
                   key={prog.id}
-                  variant="gold-border"
-                  className="p-6 flex flex-col justify-between hover:border-[#C5A880]/40 transition duration-300"
+                  className="p-0 overflow-hidden flex flex-col justify-between border-slate-200/80 bg-white hover:border-[#945f36]/45 hover:shadow-lg transition duration-300 group"
                 >
-                  <div className="space-y-4">
-                    {/* Header info */}
-                    <div className="flex items-center justify-between gap-4">
-                      <div className="h-10 w-10 rounded-xl bg-slate-950 border border-slate-800 text-[#C5A880] flex items-center justify-center shrink-0">
-                        <IconComp className="h-4 w-4" />
+                  <div className="space-y-4 flex flex-col">
+                    {/* Image / Documentation */}
+                    {prog.image && (
+                      <div className="relative aspect-video w-full overflow-hidden bg-slate-900 border-b border-slate-100">
+                        <img
+                          src={prog.image}
+                          alt={prog.title}
+                          className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-85" />
+                        <span className="absolute right-4 top-4 rounded-lg bg-[#945f36] px-2.5 py-0.5 text-[9px] font-bold text-white uppercase tracking-wider backdrop-blur-sm">
+                          {prog.category}
+                        </span>
                       </div>
-                      <span className="rounded-lg bg-slate-900 border border-slate-850 px-2.5 py-1 text-[9px] font-bold text-slate-400 uppercase tracking-widest">
-                        {prog.category}
-                      </span>
-                    </div>
+                    )}
 
-                    <div className="space-y-2">
-                      <h3 className="text-base font-bold text-white leading-tight">
-                        {prog.title}
-                      </h3>
-                      <p className="text-xs text-slate-400 leading-relaxed min-h-[72px]">
+                    <div className="px-6 pb-2 space-y-3">
+                      <div className="flex items-center gap-3">
+                        <div className="h-9 w-9 rounded-xl bg-amber-50 border border-amber-200/60 text-[#945f36] flex items-center justify-center shrink-0">
+                          <IconComp className="h-4.5 w-4.5" />
+                        </div>
+                        <h3 className="text-base font-black text-slate-900 group-hover:text-[#945f36] transition duration-200 leading-tight">
+                          {prog.title}
+                        </h3>
+                      </div>
+                      <p className="text-xs text-slate-600 font-medium leading-relaxed min-h-[72px]">
                         {prog.description}
                       </p>
                     </div>
                   </div>
 
                   {/* Footer schedule */}
-                  <div className="mt-6 border-t border-white/5 pt-4 flex items-center gap-2.5 text-[10px] text-slate-500 font-bold uppercase tracking-wider">
-                    <Calendar className="h-3.5 w-3.5 text-[#C5A880]" />
-                    <span>Jadwal: {prog.schedule}</span>
+                  <div className="mx-6 mb-6 mt-4 border-t border-slate-100 pt-4 flex items-center gap-2.5 text-[10px] text-slate-500 font-bold uppercase tracking-wider">
+                    <Calendar className="h-3.5 w-3.5 text-[#945f36]" />
+                    <span className="text-slate-550 font-medium">Jadwal: {prog.schedule}</span>
                   </div>
                 </Card>
               );
             })}
           </div>
         ) : (
-          <div className="text-center py-16 rounded-3xl bg-slate-900/10 border border-slate-800/80 max-w-xl mx-auto space-y-2">
-            <ShieldAlert className="h-8 w-8 text-slate-500 mx-auto" />
-            <h3 className="text-sm font-bold text-white">Program tidak ditemukan</h3>
+          <div className="text-center py-16 rounded-3xl bg-white border border-slate-200 max-w-xl mx-auto space-y-2 shadow-sm">
+            <ShieldAlert className="h-8 w-8 text-slate-450 mx-auto" />
+            <h3 className="text-sm font-bold text-slate-900">Program tidak ditemukan</h3>
             <p className="text-xs text-slate-500">Coba ubah filter kategori atau kata kunci pencarian Anda.</p>
           </div>
         )}
       </section>
 
       {/* 4. Support banner */}
-      <section className="max-w-4xl mx-auto rounded-3xl bg-red-950/20 border border-red-900/40 p-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <section className="max-w-4xl mx-auto rounded-3xl bg-[#945f36]/5 border border-[#945f36]/20 p-6 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
         <div className="space-y-1 md:max-w-xl text-center md:text-left">
-          <h4 className="text-xs font-bold text-white uppercase tracking-wider">Ingin Berkolaborasi Bersama MENWA Satuan 811?</h4>
-          <p className="text-[11px] text-slate-400 leading-relaxed">
+          <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">Ingin Berkolaborasi Bersama SATMENWA 874?</h4>
+          <p className="text-[11px] text-slate-500 font-medium leading-relaxed">
             Kami menerima kemitraan kegiatan pembinaan disiplin sekolah, kepramukaan, pengamanan seminar/acara besar, donor darah, hingga edukasi kebencanaan.
           </p>
         </div>
-        <Button variant="accent" size="sm" className="uppercase tracking-wider text-xs font-bold shrink-0">
+        <Button variant="accent" size="sm" className="uppercase tracking-wider text-xs font-bold shrink-0 bg-[#945f36] hover:bg-[#744520] text-white border border-[#945f36] transition-all duration-300 shadow-sm">
           Ajukan Kemitraan
         </Button>
       </section>

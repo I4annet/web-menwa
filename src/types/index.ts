@@ -22,6 +22,7 @@ export interface WorkProgram {
   description: string;
   schedule: string;
   icon: string;
+  image?: string;
 }
 
 export interface EducationStep {

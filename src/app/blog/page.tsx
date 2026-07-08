@@ -47,20 +47,20 @@ export default function BlogListing() {
       
       {/* 1. Header Section */}
       <section className="space-y-4 text-center max-w-3xl mx-auto pt-8">
-        <div className="inline-flex items-center gap-2 rounded-full border border-[#C5A880]/30 bg-slate-900/40 px-3.5 py-1.5 text-xs font-semibold tracking-wider text-[#C5A880] uppercase">
+        <div className="inline-flex items-center gap-2 rounded-full border border-red-100 bg-red-50 px-3.5 py-1.5 text-xs font-bold tracking-wider text-[#7a1c1c] uppercase">
           Blogger & Berita
         </div>
-        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl heading-gradient">
+        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl heading-gradient text-slate-900">
           Kabar & Wawasan Satuan
         </h1>
-        <p className="text-sm text-slate-400 leading-relaxed">
+        <p className="text-sm text-slate-500 font-medium leading-relaxed">
           Ikuti dokumentasi kegiatan resmi, artikel opini wawasan kebangsaan, serta panduan pertolongan pertama dan bertahan hidup hasil tulisan prajurit Menwa Polinema.
         </p>
       </section>
 
       {/* 2. Controls (Categories & Search) */}
       <section className="space-y-6 max-w-5xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/5 pb-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 pb-6">
           {/* Category buttons */}
           <div className="flex flex-wrap gap-2">
             {categories.map((cat) => (
@@ -69,8 +69,8 @@ export default function BlogListing() {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2 text-xs font-bold uppercase tracking-wider rounded-xl transition duration-300 border cursor-pointer ${
                   selectedCategory === cat
-                    ? "bg-red-950/60 border-red-900 text-[#C5A880] shadow-inner"
-                    : "bg-slate-900/40 border-slate-800 text-slate-400 hover:text-white hover:border-slate-700"
+                    ? "bg-[#945f36] border-[#945f36] text-white shadow-sm"
+                    : "bg-white border-slate-200 text-slate-600 hover:text-[#945f36] hover:border-[#945f36]"
                 }`}
               >
                 {cat}
@@ -80,7 +80,7 @@ export default function BlogListing() {
 
           {/* Search box input */}
           <div className="relative max-w-xs w-full">
-            <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-500">
+            <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400">
               <Search className="h-4 w-4" />
             </span>
             <input
@@ -88,7 +88,7 @@ export default function BlogListing() {
               placeholder="Cari artikel..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-slate-900/40 border border-slate-800 rounded-xl py-2.5 pl-10 pr-4 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#C5A880]/50 transition duration-300"
+              className="w-full bg-white border border-slate-200 rounded-xl py-2.5 pl-10 pr-4 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#945f36] focus:ring-1 focus:ring-[#945f36] transition duration-300"
             />
           </div>
         </div>
@@ -97,8 +97,8 @@ export default function BlogListing() {
       {/* 3. Dynamic content panel */}
       {loading ? (
         <div className="text-center py-20">
-          <div className="h-8 w-8 animate-spin rounded-full border-4 border-slate-700 border-t-[#C5A880] mx-auto" />
-          <p className="mt-4 text-xs text-slate-500">Memuat artikel terbaru...</p>
+          <div className="h-8 w-8 animate-spin rounded-full border-4 border-slate-200 border-t-[#caa472] mx-auto" />
+          <p className="mt-4 text-xs text-slate-505 font-medium">Memuat artikel terbaru...</p>
         </div>
       ) : filteredPosts.length > 0 ? (
         <div className="max-w-6xl mx-auto space-y-12">
@@ -106,48 +106,48 @@ export default function BlogListing() {
           {/* Featured Spotlight Card */}
           {featuredPost && selectedCategory === "Semua" && searchQuery === "" && (
             <Link href={`/blog/${featuredPost.slug}`} className="group block">
-              <Card variant="gold-border" className="p-0 overflow-hidden bg-slate-900/20 hover:border-[#C5A880]/40 transition duration-300">
+              <Card className="p-0 overflow-hidden border-slate-200/80 bg-white hover:border-[#945f36]/45 hover:shadow-lg hover:shadow-slate-100/50 transition duration-300">
                 <div className="grid lg:grid-cols-12 gap-0">
-                  <div className="lg:col-span-7 relative aspect-video lg:aspect-auto min-h-[300px] overflow-hidden bg-slate-950">
+                  <div className="lg:col-span-7 relative aspect-video lg:aspect-auto min-h-[300px] overflow-hidden bg-slate-900">
                     <img
                       src={featuredPost.image}
                       alt={featuredPost.title}
                       className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.02]"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/20 to-transparent hidden lg:block" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent lg:hidden" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/20 to-transparent hidden lg:block" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent lg:hidden" />
                   </div>
                   <div className="lg:col-span-5 p-8 sm:p-12 flex flex-col justify-between space-y-6">
                     <div className="space-y-4">
-                      <span className="rounded-lg bg-red-950/80 border border-red-900/60 px-3 py-1 text-[10px] font-bold text-white uppercase tracking-wider">
+                      <span className="rounded-lg bg-amber-50 border border-amber-200/60 px-3 py-1 text-[10px] font-bold text-[#945f36] uppercase tracking-wider">
                         UTAMA • {featuredPost.category}
                       </span>
                       <div className="flex items-center gap-3 text-[10px] text-slate-500 font-medium">
-                        <Calendar className="h-3.5 w-3.5" />
+                        <Calendar className="h-3.5 w-3.5 text-[#945f36]" />
                         <span>{featuredPost.date}</span>
                         <span>•</span>
-                        <Clock className="h-3.5 w-3.5" />
+                        <Clock className="h-3.5 w-3.5 text-[#945f36]" />
                         <span>{featuredPost.readTime} Baca</span>
                       </div>
-                      <h2 className="text-2xl font-bold text-white group-hover:text-[#C5A880] transition leading-tight">
+                      <h2 className="text-2xl font-bold text-slate-900 group-hover:text-[#945f36] transition leading-tight">
                         {featuredPost.title}
                       </h2>
-                      <p className="text-xs text-slate-400 leading-relaxed">
+                      <p className="text-xs text-slate-600 leading-relaxed font-medium">
                         {featuredPost.excerpt}
                       </p>
                     </div>
 
-                    <div className="flex items-center gap-4 border-t border-white/5 pt-6">
+                    <div className="flex items-center gap-4 border-t border-slate-100 pt-6">
                       <img
                         src={featuredPost.author.avatar}
                         alt={featuredPost.author.name}
-                        className="h-10 w-10 rounded-full object-cover border border-slate-700"
+                        className="h-10 w-10 rounded-full object-cover border border-slate-200"
                       />
                       <div>
-                        <p className="text-xs font-bold text-white leading-tight">
+                        <p className="text-xs font-bold text-slate-900 leading-tight">
                           {featuredPost.author.name}
                         </p>
-                        <p className="text-[10px] text-slate-500 leading-tight">
+                        <p className="text-[10px] text-slate-500 leading-tight font-medium">
                           {featuredPost.author.role}
                         </p>
                       </div>
@@ -162,15 +162,15 @@ export default function BlogListing() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {(selectedCategory !== "Semua" || searchQuery !== "" ? filteredPosts : regularPosts).map((post) => (
               <Link key={post.id} href={`/blog/${post.slug}`} className="group flex flex-col">
-                <Card className="flex flex-col h-full p-0 overflow-hidden border-slate-800 bg-slate-900/10 hover:border-[#C5A880]/30 transition duration-300 hover:-translate-y-1">
-                  <div className="relative aspect-video w-full overflow-hidden bg-slate-950">
+                <Card className="flex flex-col h-full p-0 overflow-hidden border-slate-200 bg-white hover:border-[#945f36]/45 hover:shadow-lg transition duration-300 hover:-translate-y-1 shadow-sm">
+                  <div className="relative aspect-video w-full overflow-hidden bg-slate-900">
                     <img
                       src={post.image}
                       alt={post.title}
                       className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
-                    <span className="absolute left-4 top-4 rounded-lg bg-red-950/80 border border-red-900/60 px-2.5 py-1 text-[10px] font-bold text-white uppercase tracking-wider">
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent" />
+                    <span className="absolute left-4 top-4 rounded-lg bg-amber-50 border border-amber-200/60 px-2.5 py-1 text-[10px] font-bold text-[#945f36] uppercase tracking-wider">
                       {post.category}
                     </span>
                   </div>
@@ -178,30 +178,30 @@ export default function BlogListing() {
                   <div className="p-6 flex flex-col justify-between flex-grow space-y-4">
                     <div className="space-y-2">
                       <div className="flex items-center gap-2 text-[10px] text-slate-500 font-medium">
-                        <Calendar className="h-3.5 w-3.5" />
+                        <Calendar className="h-3.5 w-3.5 text-[#945f36]" />
                         <span>{post.date}</span>
                         <span>•</span>
-                        <span>{post.readTime}</span>
+                        <span>{post.readTime} Baca</span>
                       </div>
-                      <h3 className="text-sm font-bold text-white group-hover:text-[#C5A880] transition leading-snug line-clamp-2">
+                      <h3 className="text-sm font-bold text-slate-900 group-hover:text-[#945f36] transition leading-snug line-clamp-2">
                         {post.title}
                       </h3>
-                      <p className="text-xs text-slate-400 leading-relaxed line-clamp-2">
+                      <p className="text-xs text-slate-600 leading-relaxed font-medium line-clamp-2">
                         {post.excerpt}
                       </p>
                     </div>
 
-                    <div className="flex items-center gap-3 border-t border-white/5 pt-4">
+                    <div className="flex items-center gap-3 border-t border-slate-100 pt-4">
                       <img
                         src={post.author.avatar}
                         alt={post.author.name}
-                        className="h-8 w-8 rounded-full object-cover border border-slate-700"
+                        className="h-8 w-8 rounded-full object-cover border border-slate-200"
                       />
                       <div>
-                        <p className="text-[11px] font-bold text-white leading-tight">
+                        <p className="text-[11px] font-bold text-slate-900 leading-tight">
                           {post.author.name}
                         </p>
-                        <p className="text-[9px] text-slate-500 leading-tight">
+                        <p className="text-[9px] text-slate-500 leading-tight font-medium">
                           {post.author.role}
                         </p>
                       </div>
@@ -214,10 +214,10 @@ export default function BlogListing() {
 
         </div>
       ) : (
-        <div className="text-center py-20 rounded-3xl bg-slate-900/10 border border-slate-800/80 max-w-xl mx-auto space-y-2">
-          <ShieldAlert className="h-8 w-8 text-slate-500 mx-auto" />
-          <h3 className="text-sm font-bold text-white">Artikel tidak ditemukan</h3>
-          <p className="text-xs text-slate-500">Coba gunakan kata kunci pencarian atau kategori filter lainnya.</p>
+        <div className="text-center py-20 rounded-3xl bg-white border border-slate-200/80 max-w-xl mx-auto space-y-2 shadow-sm">
+          <ShieldAlert className="h-8 w-8 text-[#945f36] mx-auto" />
+          <h3 className="text-sm font-bold text-slate-900">Artikel tidak ditemukan</h3>
+          <p className="text-xs text-slate-550 font-medium">Coba gunakan kata kunci pencarian atau kategori filter lainnya.</p>
         </div>
       )}
 
