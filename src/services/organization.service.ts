@@ -16,13 +16,10 @@ export async function getOrganizationMembers() {
 
     const snapshot = await getDocs(q);
 
-    console.log("Jumlah data", snapshot.size);
-
     const members: OrganizationMember[] = snapshot.docs.map((doc) => ({
         id: doc.id,
         ...(doc.data() as Omit<OrganizationMember, "id">),
     }));
 
-    console.log(members)
     return members;
 }
