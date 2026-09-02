@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Detail Kegiatan - Menwa Polinema</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#002347",
+                        "on-tertiary-fixed": "#410007",
+                        "inverse-primary": "#adc8f5",
+                        "on-primary-fixed-variant": "#2c486d",
+                        "surface-bright": "#f8f9ff",
+                        "outline-variant": "#c4c6cf",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-primary-fixed": "#001c3a",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#000d21",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb3b1",
+                        "on-error-container": "#93000a",
+                        "outline": "#74777f",
+                        "primary-fixed-dim": "#adc8f5",
+                        "tertiary": "#240002",
+                        "on-tertiary-container": "#fe404e",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "surface-container": "#e5eeff",
+                        "surface-tint": "#455f87",
+                        "on-primary-container": "#718bb5",
+                        "primary-fixed": "#d4e3ff",
+                        "surface-variant": "#d3e4fe",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#616363",
+                        "on-surface": "#0b1c30",
+                        "tertiary-fixed": "#ffdad8",
+                        "background": "#f8f9ff",
+                        "surface-container-low": "#eff4ff",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f8f9ff",
+                        "on-background": "#0b1c30",
+                        "secondary-fixed": "#e2e2e2",
+                        "tertiary-container": "#4e000a",
+                        "secondary": "#5d5f5f",
+                        "on-surface-variant": "#43474e",
+                        "on-tertiary-fixed-variant": "#92001c",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#dfe0e0",
+                        "surface-dim": "#cbdbf5",
+                        "surface-container-high": "#dce9ff",
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "inverse-surface": "#213145",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#eaf1ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit-lg": "24px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "unit-md": "16px",
+                        "unit-xl": "48px",
+                        "margin-mobile": "16px",
+                        "unit-xs": "4px",
+                        "margin-desktop": "48px",
+                        "unit-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Public Sans"],
+                        "body-md": ["Public Sans"],
+                        "label-md": ["Public Sans"],
+                        "headline-md": ["Public Sans"],
+                        "headline-xl": ["Public Sans"],
+                        "headline-sm": ["Public Sans"],
+                        "headline-lg": ["Public Sans"],
+                        "label-sm": ["Public Sans"],
+                        "headline-xl-mobile": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-xl-mobile": ["36px", { "lineHeight": "44px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; background-color: #f8f9ff; color: #0b1c30; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-surface border-b border-outline-variant w-full sticky top-0 z-50">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
+<div class="font-headline-sm text-headline-sm font-bold text-primary">MENWA POLINEMA</div>
+<nav class="hidden md:flex gap-unit-lg items-center h-full">
+<a class="font-label-md text-label-md tracking-wider h-full flex items-center text-on-surface-variant hover:text-primary transition-colors duration-200 ease-in-out hover:bg-surface-container-low px-4" href="#">BERANDA</a>
+<a class="font-label-md text-label-md tracking-wider h-full flex items-center text-on-surface-variant hover:text-primary transition-colors duration-200 ease-in-out hover:bg-surface-container-low px-4" href="#">PROFIL</a>
+<a class="font-label-md text-label-md tracking-wider h-full flex items-center text-primary border-b-2 border-primary pb-1" href="#">KEGIATAN</a>
+<a class="font-label-md text-label-md tracking-wider h-full flex items-center text-on-surface-variant hover:text-primary transition-colors duration-200 ease-in-out hover:bg-surface-container-low px-4" href="#">PENDAFTARAN</a>
+<a class="font-label-md text-label-md tracking-wider h-full flex items-center text-on-surface-variant hover:text-primary transition-colors duration-200 ease-in-out hover:bg-surface-container-low px-4" href="#">KONTAK</a>
+</nav>
+<div class="flex items-center gap-unit-md">
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<button class="font-label-md text-label-md bg-primary text-on-primary px-unit-md py-unit-xs rounded hover:bg-primary-container transition-colors duration-200 uppercase hidden md:block">
+                    LOGIN
+                </button>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-unit-xl">
+<!-- Breadcrumbs -->
+<nav aria-label="Breadcrumb" class="flex text-on-surface-variant font-label-sm text-label-sm mb-unit-lg items-center gap-unit-xs">
+<a class="hover:text-primary transition-colors" href="#">Beranda</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Program Kerja &amp; Kegiatan</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-primary font-bold">Latihan Kepemimpinan Tingkat Dasar 2024</span>
+</nav>
+<!-- Activity Header -->
+<header class="mb-unit-xl">
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary mb-unit-sm">Latihan Kepemimpinan Tingkat Dasar (LKTD) 2024</h1>
+<div class="flex flex-wrap gap-unit-md text-on-surface-variant font-body-md text-body-md items-center">
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined">calendar_today</span>
+<span>12 - 15 Agustus 2024</span>
+</div>
+<div class="flex items-center gap-unit-xs">
+<span class="material-symbols-outlined">location_on</span>
+<span>Pusdiklat TNI AD, Malang</span>
+</div>
+<span class="bg-primary-container text-on-primary px-unit-sm py-1 rounded font-label-sm text-label-sm uppercase tracking-wider">Pendidikan</span>
+</div>
+</header>
+<!-- Main Content Area -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Left Column: Media & Description -->
+<div class="lg:col-span-2 flex flex-col gap-unit-xl">
+<!-- Main Image -->
+<div class="w-full aspect-video bg-surface-container rounded-lg overflow-hidden border border-outline-variant flex items-center justify-center relative">
+<img alt="Main Activity Photo" class="w-full h-full object-cover absolute inset-0" data-alt="A professional photograph of an outdoor military-style leadership training exercise at a training center. Young adults in disciplined formations wearing institutional uniforms. The scene is lit by bright daylight, conveying a sense of rigorous physical activity, discipline, and teamwork. The image uses a realistic and formal documentary photography style consistent with an official institutional record." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJI4Vz6DlQdVsTtvLxOosaq_cMLtIhuSPYNWFYjKYApLd2z3ykKpiObHa_igNHJV-Z27QB60nhVk7Ufq1M9xzNuC8hMJQVqN7qjJ7XvTyBOwShHtsixtR-nZKRruQfWX6H45mj1mhpiKhUNHnLA7cwY0WusODtj8qIEdr4AuXJTxiCfoQfXsxmEleOOou2uPBx0hwY7FMI8bTJzF5EpMe2gh8u1hPb5PffPvN_BwnXomiXzWNVdpBH"/>
+<div class="absolute inset-0 bg-primary opacity-10"></div>
+</div>
+<!-- Description section -->
+<section class="bg-surface-container-lowest p-unit-lg border border-outline-variant rounded-lg">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-unit-md border-b border-outline-variant pb-unit-sm">Deskripsi Kegiatan</h2>
+<div class="font-body-md text-body-md text-on-surface space-y-4">
+<p>Latihan Kepemimpinan Tingkat Dasar (LKTD) merupakan agenda wajib tahunan Resimen Mahasiswa Politeknik Negeri Malang yang dirancang untuk menanamkan nilai-nilai kepemimpinan, kedisiplinan, dan tanggung jawab berbangsa dan bernegara kepada calon anggota baru.</p>
+<p>Kegiatan ini dilaksanakan selama empat hari tiga malam dengan melibatkan instruktur berpengalaman dari lingkungan kampus maupun institusi kemiliteran setempat. Kurikulum LKTD mencakup materi kelas mengenai wawasan kebangsaan, manajemen organisasi, serta aplikasi lapangan berupa baris-berbaris, navigasi darat, dan survival dasar.</p>
+</div>
+</section>
+<!-- Gallery -->
+<section>
+<h2 class="font-headline-sm text-headline-sm text-primary mb-unit-md">Dokumentasi</h2>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-unit-md">
+<div class="aspect-square bg-surface-container rounded border border-outline-variant overflow-hidden relative">
+<img alt="Gallery photo 1" class="w-full h-full object-cover" data-alt="A medium shot of cadets in uniform sitting attentively in a classroom setting, taking notes during a lecture on national insight. Formal, documentary photography style, well-lit indoor lighting, conveying focus and institutional discipline." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBezGvsm7stT1Gz2B29CThVKbudNk0F2dWRavutvxPQCtWci-a3hgL6VJk3tR-KkiXGsNvk09roLCBELa2gmhrNIbz1WunhCpfY9nU5azPntdENUGrLGHkZtFgaEu1heaxq2xZneW1zZ4Rze7-eeZ6z1Jg6jtZ36GhURbY4Vp9d0uVulxXC31RYPb2vvDvyDrUffCF45Az_lNP4rXWCb5KxSmwG88PNlBC8PvUVtShWTEZPZSl8UL1W"/>
+</div>
+<div class="aspect-square bg-surface-container rounded border border-outline-variant overflow-hidden relative">
+<img alt="Gallery photo 2" class="w-full h-full object-cover" data-alt="A wide shot capturing an early morning physical fitness drill on a large field. Cadets are performing push-ups in perfect synchrony. The lighting is early dawn, casting long shadows. Formal documentary style highlighting physical endurance and order." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA6bBds71oKjYY30DtHJWeE8aisrCIQXkOFQXtQ1bL4IutMf-cUOeX2Z4EfSBtFkCmKb6hAmgrOvg_qGih88J4Yug71fH8nNb7hIrHZzAqsW092_oJEbHULMM-o_ofeoKdEBK_wtjtsv0IhrFZ4BejFgeHEV5BPOfvfemoUcHxcpHHYkszXudPHra8UtykoGSeoCz0zp_poxZ7uW38yROE_LCjyc1XjGxbpOyXq4I-LnW_RFa7u4m5"/>
+</div>
+<div class="aspect-square bg-surface-container rounded border border-outline-variant overflow-hidden relative">
+<img alt="Gallery photo 3" class="w-full h-full object-cover" data-alt="A close-up shot of a cadet's uniform showing a newly pinned badge of rank or achievement. The focus is sharp on the metallic badge with the background slightly blurred. Formal, proud, and authoritative documentary style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2aCcqyY3b9o3kmLEATndS363oUWX0K3T1SHEFpbXV3cPaWuJmqVykrKQpxzrMGH4IWrDx2hdxZL1-LYlwIv7yfiVrbjVgnGd_w1y7LePDtbEi_a4xOzUHhI4IUKyTBm635zO47NkTGd60_9rkpt89TBpsQT6FB2WwUY2cs3TxbpWDZjhVu4A69oVwwlcxSNokJLbwU71tjw9fQSwCxQxxWWg1MKsj8E-8su2zNzrAVHhlwI2zaREy"/>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Details Sidebar -->
+<div class="flex flex-col gap-unit-lg">
+<!-- Objectives Card -->
+<div class="bg-surface-container-lowest p-unit-lg border border-outline-variant rounded-lg">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-unit-md border-b border-outline-variant pb-unit-sm flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-primary">target</span>
+                        Tujuan Kegiatan
+                    </h3>
+<ul class="font-body-md text-body-md text-on-surface space-y-unit-sm">
+<li class="flex items-start gap-unit-xs">
+<span class="material-symbols-outlined text-primary text-[20px] mt-1">check_circle</span>
+<span>Membentuk karakter pemimpin yang tangguh dan bertanggung jawab.</span>
+</li>
+<li class="flex items-start gap-unit-xs">
+<span class="material-symbols-outlined text-primary text-[20px] mt-1">check_circle</span>
+<span>Meningkatkan kedisiplinan dan jiwa korsa antar anggota.</span>
+</li>
+<li class="flex items-start gap-unit-xs">
+<span class="material-symbols-outlined text-primary text-[20px] mt-1">check_circle</span>
+<span>Membekali keterampilan dasar bertahan hidup dan navigasi darat.</span>
+</li>
+</ul>
+</div>
+<!-- Role Card -->
+<div class="bg-surface-container-lowest p-unit-lg border border-outline-variant rounded-lg">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-unit-md border-b border-outline-variant pb-unit-sm flex items-center gap-unit-xs">
+<span class="material-symbols-outlined text-primary">shield_person</span>
+                        Peran Menwa
+                    </h3>
+<p class="font-body-md text-body-md text-on-surface">
+                        Sebagai panitia penyelenggara dan fasilitator pendamping. Menwa senior bertugas memastikan seluruh rangkaian kegiatan berjalan sesuai protokol keamanan dan tata tertib militer dasar yang berlaku di lingkungan kampus.
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary w-full mt-unit-xl border-t border-primary-container">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-unit-xl grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Brand -->
+<div class="flex flex-col gap-unit-sm">
+<div class="font-headline-sm text-headline-sm font-bold text-on-primary">MENWA POLINEMA</div>
+<p class="font-body-md text-body-md opacity-80">
+                    Resimen Mahasiswa Politeknik Negeri Malang. Membentuk kader pimpinan bangsa yang disiplin, berdedikasi, dan berwawasan kebangsaan.
+                </p>
+</div>
+<!-- Links -->
+<div class="flex flex-col gap-unit-sm">
+<h4 class="font-label-md text-label-md uppercase tracking-wider mb-unit-xs">Tautan Penting</h4>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-on-primary transition-colors duration-200" href="#">Tentang Kami</a>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-on-primary transition-colors duration-200" href="#">Struktur Organisasi</a>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-on-primary transition-colors duration-200" href="#">Galeri Kegiatan</a>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-on-primary transition-colors duration-200" href="#">Hubungi Kami</a>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-on-primary transition-colors duration-200" href="#">Prasyarat</a>
+</div>
+<!-- Contact -->
+<div class="flex flex-col gap-unit-sm">
+<h4 class="font-label-md text-label-md uppercase tracking-wider mb-unit-xs">Kontak Markas</h4>
+<div class="flex items-center gap-unit-xs font-body-md text-body-md text-on-primary-container opacity-80">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+<span>Jl. Soekarno Hatta No.9, Malang</span>
+</div>
+<div class="flex items-center gap-unit-xs font-body-md text-body-md text-on-primary-container opacity-80">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+<span>menwa@polinema.ac.id</span>
+</div>
+</div>
+</div>
+<div class="border-t border-primary-container py-unit-md text-center">
+<p class="font-body-md text-body-md opacity-70">© 2024 Resimen Mahasiswa Politeknik Negeri Malang. All Rights Reserved.</p>
+</div>
+</footer>
+</body></html>

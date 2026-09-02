@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Struktur Organisasi - MENWA POLINEMA</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#002347",
+                        "on-tertiary-fixed": "#410007",
+                        "inverse-primary": "#adc8f5",
+                        "on-primary-fixed-variant": "#2c486d",
+                        "surface-bright": "#f8f9ff",
+                        "outline-variant": "#c4c6cf",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-primary-fixed": "#001c3a",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#000d21",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb3b1",
+                        "on-error-container": "#93000a",
+                        "outline": "#74777f",
+                        "primary-fixed-dim": "#adc8f5",
+                        "tertiary": "#240002",
+                        "on-tertiary-container": "#fe404e",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "surface-container": "#e5eeff",
+                        "surface-tint": "#455f87",
+                        "on-primary-container": "#718bb5",
+                        "primary-fixed": "#d4e3ff",
+                        "surface-variant": "#d3e4fe",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#616363",
+                        "on-surface": "#0b1c30",
+                        "tertiary-fixed": "#ffdad8",
+                        "background": "#f8f9ff",
+                        "surface-container-low": "#eff4ff",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f8f9ff",
+                        "on-background": "#0b1c30",
+                        "secondary-fixed": "#e2e2e2",
+                        "tertiary-container": "#4e000a",
+                        "secondary": "#5d5f5f",
+                        "on-surface-variant": "#43474e",
+                        "on-tertiary-fixed-variant": "#92001c",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#dfe0e0",
+                        "surface-dim": "#cbdbf5",
+                        "surface-container-high": "#dce9ff",
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "inverse-surface": "#213145",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#eaf1ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit-lg": "24px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "unit-md": "16px",
+                        "unit-xl": "48px",
+                        "margin-mobile": "16px",
+                        "unit-xs": "4px",
+                        "margin-desktop": "48px",
+                        "unit-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Public Sans"],
+                        "body-md": ["Public Sans"],
+                        "label-md": ["Public Sans"],
+                        "headline-md": ["Public Sans"],
+                        "headline-xl": ["Public Sans"],
+                        "headline-sm": ["Public Sans"],
+                        "headline-lg": ["Public Sans"],
+                        "label-sm": ["Public Sans"],
+                        "headline-xl-mobile": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-xl-mobile": ["36px", { "lineHeight": "44px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-background font-body-md font-body-md antialiased flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-primary-container sticky top-0 z-50 w-full border-b border-outline-variant dark:border-outline">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
+<!-- Brand Logo -->
+<div class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed">
+                MENWA POLINEMA
+            </div>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex space-x-unit-lg h-full items-center">
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 ease-in-out h-full flex items-center px-2 hover:bg-surface-container-low dark:hover:bg-primary" href="#">BERANDA</a>
+<!-- Active Link: PROFIL (Closest semantic match to Organization Structure) -->
+<a class="font-label-md text-label-md uppercase tracking-wider text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1 h-full flex items-center px-2" href="#">PROFIL</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 ease-in-out h-full flex items-center px-2 hover:bg-surface-container-low dark:hover:bg-primary" href="#">KEGIATAN</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 ease-in-out h-full flex items-center px-2 hover:bg-surface-container-low dark:hover:bg-primary" href="#">PENDAFTARAN</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 ease-in-out h-full flex items-center px-2 hover:bg-surface-container-low dark:hover:bg-primary" href="#">KONTAK</a>
+</nav>
+<!-- Trailing Action -->
+<div class="hidden md:block">
+<a class="bg-primary text-on-primary font-label-md text-label-md px-4 py-2 rounded-lg hover:bg-inverse-surface transition-colors duration-200 flex items-center gap-2" href="#">
+                    LOGIN
+                </a>
+</div>
+<!-- Mobile Menu Toggle (Icon only for structural placeholder) -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow">
+<!-- Header Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-unit-xl">
+<div class="flex flex-col items-center text-center max-w-3xl mx-auto">
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary mb-unit-sm">Struktur Organisasi</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Mengenal jajaran kepengurusan Resimen Mahasiswa Politeknik Negeri Malang periode berjalan. Dedikasi dan integritas dalam menjalankan tugas institusi.
+                </p>
+<div class="h-1 w-24 bg-primary mt-unit-lg rounded-full"></div>
+</div>
+</section>
+<!-- Organization Grid Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-unit-xl">
+<!-- Commander (Full Width/Centered Top) -->
+<div class="flex justify-center mb-gutter">
+<div class="w-full max-w-md bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col group hover:border-primary transition-colors duration-300">
+<div class="h-64 md:h-80 w-full relative bg-surface-container-low">
+<img class="absolute inset-0 w-full h-full object-cover object-top" data-alt="A professional studio portrait photograph of a young Indonesian male university student in a formal, dark navy military-style regiment uniform. He stands confidently against a clean, light grey background. The lighting is crisp, bright, and corporate, highlighting his authoritative yet approachable expression. He wears a beret and name tag. High resolution, clear details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe_57GxGm1k6qRYmpOs90Q15wehPEE_Jn4oG9tGdZcA0bhbt42XtbuKL7SjggQO6igD90ZVrmx1DuEaMG5CuqQndViwoHLklb3NNNWD9WuGHoyyddP0U-ET4wdAz45FHd-KhIvypgprdrc4pw6iLOjTip-T0ab_1zwT74EbuMNhB69DOohn1_yw_xc9dnqG-uqtOYQdFJ95-Xgq46JhJNraP9GBXcrJgj51Koi1z47a0diHdGfgBZj"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-unit-md">
+<a class="text-on-primary font-label-md text-label-md flex items-center gap-2 hover:underline" href="#">
+                                Lihat Biodata <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="p-unit-md text-center flex-grow flex flex-col justify-center">
+<div class="bg-primary text-on-primary font-label-sm text-label-sm py-1 px-3 rounded-full inline-block mx-auto mb-2 uppercase tracking-wide">Komandan Menwa</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">M. Arya Bima</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Teknik Sipil</p>
+</div>
+</div>
+</div>
+<!-- Core Team Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Sekretaris -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col group hover:border-primary transition-colors duration-300">
+<div class="h-56 w-full relative bg-surface-container-low">
+<img class="absolute inset-0 w-full h-full object-cover object-top" data-alt="A professional studio portrait photograph of a young Indonesian female university student in a formal, dark navy military-style regiment uniform, including a neatly styled hijab. She poses against a minimalist light grey backdrop. The lighting is bright and soft, creating a clean, corporate, and official look. She appears organized and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWLoqr0qecsm542N9ZNrvxpmtpOPZBB6rzpwym9EnMOf0879MyyMwkQCX2bSq9gqy2b6ED3x99LyCVkqHo6w6KftY5D8ViLi1yLglkjctSi2aucFav0RXJxa01-GJC96A-aMfCbMwmSxNlkN3gUEmKmslVD3Nt4mlVxysaCWCjgkKn0LaaWcEw5AVbhR5bRHaVxkKiJeSf6NpFXzagpC337YYZJdpvHdE1GD60xtisSlNy0lR4Xq8f"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-unit-md">
+<a class="text-on-primary font-label-md text-label-md flex items-center gap-2 hover:underline" href="#">
+                                Lihat Biodata <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="p-unit-md flex-grow flex flex-col">
+<span class="font-label-sm text-label-sm text-primary mb-1 uppercase tracking-wider">Sekretaris Menwa</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Siti Nurhaliza</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Akuntansi</p>
+<div class="mt-auto">
+<button class="w-full border border-primary text-primary font-label-md text-label-md py-2 rounded-lg hover:bg-surface-container transition-colors duration-200 md:hidden">Lihat Biodata</button>
+</div>
+</div>
+</div>
+<!-- Bendahara -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col group hover:border-primary transition-colors duration-300">
+<div class="h-56 w-full relative bg-surface-container-low">
+<img class="absolute inset-0 w-full h-full object-cover object-top" data-alt="A professional studio portrait photograph of a young Indonesian male university student in a formal, dark navy military-style regiment uniform. He is holding a clipboard slightly out of frame, looking directly at the camera with a dependable and focused expression. The background is a clean, modern white studio setting. High-key lighting, corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZpxpqpzDY-dhkuBWXUTIktzEggg5ppp5NW9OiYfwUN70y5uCojS33q8G87LmW5a3J-vwS4feG4_HmCEIL4u-iy-hVPpKTrWfqg7mcb_hEl7p6qrjCJUUM2wc3CdCv2pkRp-0PzuqRvhLErx13TLZZ21-thR_cMjYlg7Mv0VfFlvS6fSTcm5dkeNlVWIXv9oTA3yfFtk77Z3CoAlK5SI5cH2rewcLHUedyMOpRkTCfguV98Eqc09lg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-unit-md">
+<a class="text-on-primary font-label-md text-label-md flex items-center gap-2 hover:underline" href="#">
+                                Lihat Biodata <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="p-unit-md flex-grow flex flex-col">
+<span class="font-label-sm text-label-sm text-primary mb-1 uppercase tracking-wider">Bendahara Menwa</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Budi Santoso</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Administrasi Bisnis</p>
+<div class="mt-auto">
+<button class="w-full border border-primary text-primary font-label-md text-label-md py-2 rounded-lg hover:bg-surface-container transition-colors duration-200 md:hidden">Lihat Biodata</button>
+</div>
+</div>
+</div>
+<!-- KAUR Konsolidasi -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col group hover:border-primary transition-colors duration-300">
+<div class="h-56 w-full relative bg-surface-container-low">
+<img class="absolute inset-0 w-full h-full object-cover object-top" data-alt="A professional studio portrait photograph of a young Indonesian male university student in a crisp, dark navy military-style regiment uniform. He stands with perfect posture, exuding discipline and leadership. The setting is a bright, neutral studio environment with crisp white lighting. The image conveys an institutional and structured mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaytQFq3iz2DRMZBs1Cky0-bYj0Akuv4ldoMdQK7Tr2LR0WR-nCKOThNnVV2AP1o6xiQYFEavyU45AMoNAkdQbli0Oj0Lku-MfYGs9TjB3uZPbPW0SqRE1LltuvJ4OU1H5M4exbg9xyI-1EZU7w2zLEetWwyRTY8WRPVfp8idtUkOTYI1fVj26tSQl1TKIwGIlP-u_69nHKIww7xhj1aAAmUE9iy1ssziu9e99Z2ZsvK7i8vW6uqcO"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-unit-md">
+<a class="text-on-primary font-label-md text-label-md flex items-center gap-2 hover:underline" href="#">
+                                Lihat Biodata <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="p-unit-md flex-grow flex flex-col">
+<span class="font-label-sm text-label-sm text-primary mb-1 uppercase tracking-wider">KAUR Konsolidasi</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Dwi Prakoso</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Teknik Mesin</p>
+<div class="mt-auto">
+<button class="w-full border border-primary text-primary font-label-md text-label-md py-2 rounded-lg hover:bg-surface-container transition-colors duration-200 md:hidden">Lihat Biodata</button>
+</div>
+</div>
+</div>
+<!-- KAUR Operasional -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col group hover:border-primary transition-colors duration-300">
+<div class="h-56 w-full relative bg-surface-container-low">
+<img class="absolute inset-0 w-full h-full object-cover object-top" data-alt="A professional studio portrait photograph of a resolute young Indonesian male university student in a formal, dark navy military-style regiment uniform. The subject has an active, alert expression suitable for an operational role. The background is a clean, bright white, enhancing the sharp details of the uniform. High contrast, modern corporate photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3tGpf4cS7l8VQppiPmRdVwjd1krX_JJ5OumXulU080BS9vP0oCjfqPJOxErVNkRnK9mPz9OzG2Gm7SbEr_SBOPJVPtmASKsRscCvvYAN5YQwPrz3E50paHnrb9NAjqRwwqf8BlhGKhSZ9UJerP8AD43a-halwDpdyu2LTGm_Q746plHe1U9-BhyOpg-2ZaVUiFF8-kMHLEo5Xu2HXYXum_0sRxg3o6DNlmPTQEwE65o6KrnYdN1cl"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-unit-md">
+<a class="text-on-primary font-label-md text-label-md flex items-center gap-2 hover:underline" href="#">
+                                Lihat Biodata <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="p-unit-md flex-grow flex flex-col">
+<span class="font-label-sm text-label-sm text-primary mb-1 uppercase tracking-wider">KAUR Operasional</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Andi Pratama</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Teknik Elektro</p>
+<div class="mt-auto">
+<button class="w-full border border-primary text-primary font-label-md text-label-md py-2 rounded-lg hover:bg-surface-container transition-colors duration-200 md:hidden">Lihat Biodata</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-primary-container border-t border-primary-container dark:border-primary mt-auto w-full">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-unit-xl grid grid-cols-1 md:grid-cols-3 gap-gutter text-on-primary dark:text-on-primary-container font-body-md text-body-md">
+<!-- Brand & Copyright -->
+<div class="flex flex-col gap-unit-md">
+<div class="font-headline-sm text-headline-sm font-bold text-on-primary">
+                    MENWA POLINEMA
+                </div>
+<p class="opacity-80">
+                    © 2024 Resimen Mahasiswa Politeknik Negeri Malang. All Rights Reserved.
+                </p>
+</div>
+<!-- Links Column 1 -->
+<div class="flex flex-col gap-unit-sm">
+<a class="text-on-primary-container dark:text-primary-fixed-dim hover:text-on-primary hover:opacity-80 transition-opacity duration-200" href="#">Tentang Kami</a>
+<!-- Active Link -->
+<a class="text-on-primary font-bold underline transition-opacity duration-200 hover:opacity-80" href="#">Struktur Organisasi</a>
+<a class="text-on-primary-container dark:text-primary-fixed-dim hover:text-on-primary hover:opacity-80 transition-opacity duration-200" href="#">Galeri Kegiatan</a>
+</div>
+<!-- Links Column 2 -->
+<div class="flex flex-col gap-unit-sm">
+<a class="text-on-primary-container dark:text-primary-fixed-dim hover:text-on-primary hover:opacity-80 transition-opacity duration-200" href="#">Hubungi Kami</a>
+<a class="text-on-primary-container dark:text-primary-fixed-dim hover:text-on-primary hover:opacity-80 transition-opacity duration-200" href="#">Prasyarat</a>
+</div>
+</div>
+</footer>
+</body></html>

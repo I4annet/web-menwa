@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kontak - Menwa Polinema</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#002347",
+                        "on-tertiary-fixed": "#410007",
+                        "inverse-primary": "#adc8f5",
+                        "on-primary-fixed-variant": "#2c486d",
+                        "surface-bright": "#f8f9ff",
+                        "outline-variant": "#c4c6cf",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-primary-fixed": "#001c3a",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#000d21",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb3b1",
+                        "on-error-container": "#93000a",
+                        "outline": "#74777f",
+                        "primary-fixed-dim": "#adc8f5",
+                        "tertiary": "#240002",
+                        "on-tertiary-container": "#fe404e",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "surface-container": "#e5eeff",
+                        "surface-tint": "#455f87",
+                        "on-primary-container": "#718bb5",
+                        "primary-fixed": "#d4e3ff",
+                        "surface-variant": "#d3e4fe",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#616363",
+                        "on-surface": "#0b1c30",
+                        "tertiary-fixed": "#ffdad8",
+                        "background": "#f8f9ff",
+                        "surface-container-low": "#eff4ff",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f8f9ff",
+                        "on-background": "#0b1c30",
+                        "secondary-fixed": "#e2e2e2",
+                        "tertiary-container": "#4e000a",
+                        "secondary": "#5d5f5f",
+                        "on-surface-variant": "#43474e",
+                        "on-tertiary-fixed-variant": "#92001c",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#dfe0e0",
+                        "surface-dim": "#cbdbf5",
+                        "surface-container-high": "#dce9ff",
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "inverse-surface": "#213145",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#eaf1ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit-lg": "24px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "unit-md": "16px",
+                        "unit-xl": "48px",
+                        "margin-mobile": "16px",
+                        "unit-xs": "4px",
+                        "margin-desktop": "48px",
+                        "unit-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Public Sans"],
+                        "body-md": ["Public Sans"],
+                        "label-md": ["Public Sans"],
+                        "headline-md": ["Public Sans"],
+                        "headline-xl": ["Public Sans"],
+                        "headline-sm": ["Public Sans"],
+                        "headline-lg": ["Public Sans"],
+                        "label-sm": ["Public Sans"],
+                        "headline-xl-mobile": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "headline-xl-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-primary-container docked full-width top-0 border-b border-outline-variant dark:border-outline flat no shadows sticky z-50">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
+<div class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed">MENWA POLINEMA</div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-md text-label-md uppercase tracking-wider duration-200 ease-in-out hover:bg-surface-container-low dark:hover:bg-primary transition-all px-2 py-1 rounded" href="#">BERANDA</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-md text-label-md uppercase tracking-wider duration-200 ease-in-out hover:bg-surface-container-low dark:hover:bg-primary transition-all px-2 py-1 rounded" href="#">PROFIL</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-md text-label-md uppercase tracking-wider duration-200 ease-in-out hover:bg-surface-container-low dark:hover:bg-primary transition-all px-2 py-1 rounded" href="#">KEGIATAN</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-md text-label-md uppercase tracking-wider duration-200 ease-in-out hover:bg-surface-container-low dark:hover:bg-primary transition-all px-2 py-1 rounded" href="#">PENDAFTARAN</a>
+<a class="text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1 font-label-md text-label-md uppercase tracking-wider duration-200 ease-in-out" href="#">KONTAK</a>
+</nav>
+<button class="hidden md:block bg-primary text-on-primary font-label-md text-label-md px-4 py-2 rounded-DEFAULT hover:opacity-90 transition-opacity">LOGIN</button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative bg-primary-container text-on-primary py-unit-xl">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center opacity-20" data-alt="A formal and disciplined photograph of the Student Regiment headquarters or training grounds at Politeknik Negeri Malang. The image features a solid, structured building or parade square with subtle lighting that emphasizes authority and organization. The color palette heavily leans on deep navy blues and crisp whites, aligning with an institutional and modern military-academic aesthetic. The mood is serious, professional, and trustworthy." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBYBgsN0JhGQcLLV6_LL77H4v1cbweadof-2oPgwcCr4QzZJ4HIMFRFf95VeqLDzXnY-iBMOGbe-y9E_XW8Wkyaz4sOHyC8uB0yCSbmGu99bCnObWiSS83Lq72PgMwNVSQSncS3oiaQrrmhlYaNLcWERboVgL1ZdyCUAaU-xDbXOQBPJOf2buGT8Zg4hvNRvFcu4OyWfJUDposVvdwj_8xa7AQgvLeP7UHZBQZMDpng-sXrHrat_-M9')"></div>
+<div class="absolute inset-0 bg-primary/80"></div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10 text-center py-unit-xl">
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl mb-unit-sm">Hubungi Kami</h1>
+<p class="font-body-lg text-body-lg text-primary-fixed max-w-2xl mx-auto">Informasi resmi, pendaftaran, dan layanan komunikasi Resimen Mahasiswa Politeknik Negeri Malang.</p>
+</div>
+</section>
+<!-- Contact Cards Section -->
+<section class="py-unit-xl max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Main Communication Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-unit-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-unit-sm mb-unit-md text-primary">
+<span class="material-symbols-outlined text-[32px]">support_agent</span>
+<h2 class="font-headline-md text-headline-md">Layanan Informasi</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-unit-lg">
+                            Untuk informasi mengenai Menwa Polinema, kegiatan, open recruitment, atau kerja sama organisasi, silakan menghubungi kami melalui WhatsApp.
+                        </p>
+</div>
+<div class="mt-auto">
+<a class="inline-flex items-center justify-center gap-unit-sm w-full bg-primary text-on-primary font-label-md text-label-md py-3 px-6 rounded-DEFAULT hover:bg-primary-container transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">chat</span>
+                            Hubungi melalui WhatsApp
+                        </a>
+<p class="text-center font-label-sm text-label-sm text-outline mt-unit-sm">
+                            Jam Operasional: Senin - Jumat, 08:00 - 16:00 WIB
+                        </p>
+</div>
+</div>
+<!-- Secondary Information Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter">
+<!-- Email Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-unit-lg shadow-sm flex flex-col items-start hover:border-primary transition-colors">
+<div class="bg-surface-container w-12 h-12 rounded-full flex items-center justify-center mb-unit-md text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-unit-xs">Email Resmi</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-unit-md flex-grow">Surat menyurat dan korespondensi resmi.</p>
+<a class="font-label-md text-label-md text-primary hover:underline" href="mailto:info@menwapolinema.ac.id">info@menwapolinema.ac.id</a>
+</div>
+<!-- Instagram Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-unit-lg shadow-sm flex flex-col items-start hover:border-primary transition-colors">
+<div class="bg-surface-container w-12 h-12 rounded-full flex items-center justify-center mb-unit-md text-primary">
+<span class="material-symbols-outlined">photo_camera</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-unit-xs">Media Sosial</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-unit-md flex-grow">Ikuti dokumentasi kegiatan terbaru kami.</p>
+<a class="font-label-md text-label-md text-primary hover:underline" href="#">@menwapolinema</a>
+</div>
+<!-- Address Card (Spans full width on sm) -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-unit-lg shadow-sm sm:col-span-2 flex flex-col sm:flex-row gap-gutter items-start hover:border-primary transition-colors">
+<div class="bg-surface-container w-12 h-12 shrink-0 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm mb-unit-xs">Markas Komando</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                Gedung Pusat Kegiatan Mahasiswa (Graha Polinema)<br/>
+                                Jl. Soekarno Hatta No.9, Jatimulyo, Kec. Lowokwaru,<br/>
+                                Kota Malang, Jawa Timur 65141
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-unit-xl">
+<div class="w-full h-[400px] bg-surface-variant rounded-lg border border-outline-variant overflow-hidden relative">
+<div class="absolute inset-0 flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[48px] mb-2">map</span>
+<p class="font-label-md text-label-md absolute bottom-4" data-location="Politeknik Negeri Malang">Peta Lokasi Mako Menwa Polinema</p>
+</div>
+<!-- Placeholder for actual map integration -->
+<div class="w-full h-full bg-cover bg-center" data-alt="A clean, modern digital map interface centered on Politeknik Negeri Malang in East Java. The map features a minimalist color scheme with subtle blues and grays, matching the institutional primary colors. A distinct, deep navy pin marker denotes the location of the Student Regiment Headquarters. The layout is structured and highly legible, reflecting a professional and organized aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCuehD9Rfnyv00vchLt_8_lko93x3K0Y5kkcK7xmF5iXr8Hr0n060k3x36YjitapYDKVK5fc-tSTDckdFqAcfAhrwHfn1v2S_2J62UTqmU_Cdh09DP6m3KlTTt5Gatr4hXF4fLR6IVvOGTsyea1tUBxS-DxRtuKJN3N70IUnSm5wHxuWpHxOkgCw5et7-i-WPMnheN8lQ_TLLugElfMNfxVIxi5LHTtzLtM06Guf1awq8LP8TMoE-cq')"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-primary-container full-width bottom border-t border-primary-container dark:border-primary flat no shadows text-on-primary dark:text-on-primary-container font-body-md text-body-md">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-unit-xl grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Brand Column -->
+<div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-primary mb-unit-sm">MENWA POLINEMA</div>
+<p class="text-on-primary-container dark:text-primary-fixed-dim mt-unit-sm text-sm">Resimen Mahasiswa Mahasurya Jawa Timur<br/>Satuan 802 Politeknik Negeri Malang</p>
+</div>
+<!-- Links Column -->
+<div>
+<h4 class="font-label-md text-label-md mb-unit-md text-on-primary">Tautan Penting</h4>
+<ul class="space-y-unit-sm">
+<li><a class="text-on-primary-container dark:text-primary-fixed-dim hover:text-on-primary transition-colors hover:opacity-80 transition-opacity duration-200" href="#">Tentang Kami</a></li>
+<li><a class="text-on-primary-container dark:text-primary-fixed-dim hover:text-on-primary transition-colors hover:opacity-80 transition-opacity duration-200" href="#">Struktur Organisasi</a></li>
+<li><a class="text-on-primary-container dark:text-primary-fixed-dim hover:text-on-primary transition-colors hover:opacity-80 transition-opacity duration-200" href="#">Galeri Kegiatan</a></li>
+<li><a class="text-on-primary font-bold underline hover:opacity-80 transition-opacity duration-200" href="#">Hubungi Kami</a></li>
+<li><a class="text-on-primary-container dark:text-primary-fixed-dim hover:text-on-primary transition-colors hover:opacity-80 transition-opacity duration-200" href="#">Prasyarat</a></li>
+</ul>
+</div>
+<!-- Contact Info Column -->
+<div>
+<h4 class="font-label-md text-label-md mb-unit-md text-on-primary">Kontak Cepat</h4>
+<p class="text-on-primary-container dark:text-primary-fixed-dim text-sm">
+                    Gedung Graha Polinema Lt. 1<br/>
+                    Jl. Soekarno Hatta No. 9<br/>
+                    Malang, Jawa Timur
+                </p>
+</div>
+</div>
+<div class="border-t border-primary-container/30 py-unit-md text-center">
+<p class="font-label-sm text-label-sm text-on-primary-container">© 2024 Resimen Mahasiswa Politeknik Negeri Malang. All Rights Reserved.</p>
+</div>
+</footer>
+</body></html>

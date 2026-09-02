@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Program Kerja &amp; Kegiatan - MENWA POLINEMA</title>
+<!-- Google Fonts: Public Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-secondary": "#ffffff",
+                "error-container": "#ffdad6",
+                "surface-container": "#e5eeff",
+                "inverse-surface": "#213145",
+                "error": "#ba1a1a",
+                "on-error-container": "#93000a",
+                "inverse-primary": "#adc8f5",
+                "surface-dim": "#cbdbf5",
+                "tertiary-fixed": "#ffdad8",
+                "secondary": "#5d5f5f",
+                "surface-container-lowest": "#ffffff",
+                "on-primary-fixed": "#001c3a",
+                "surface-variant": "#d3e4fe",
+                "tertiary-fixed-dim": "#ffb3b1",
+                "on-secondary-fixed": "#1a1c1c",
+                "on-surface": "#0b1c30",
+                "on-primary-fixed-variant": "#2c486d",
+                "background": "#f8f9ff",
+                "surface-tint": "#455f87",
+                "on-tertiary-fixed-variant": "#92001c",
+                "surface-container-highest": "#d3e4fe",
+                "secondary-fixed": "#e2e2e2",
+                "surface-container-low": "#eff4ff",
+                "primary": "#000d21",
+                "on-tertiary-fixed": "#410007",
+                "surface-bright": "#f8f9ff",
+                "on-secondary-container": "#616363",
+                "on-primary-container": "#718bb5",
+                "tertiary-container": "#4e000a",
+                "on-primary": "#ffffff",
+                "on-background": "#0b1c30",
+                "secondary-fixed-dim": "#c6c6c7",
+                "outline-variant": "#c4c6cf",
+                "surface": "#f8f9ff",
+                "on-tertiary": "#ffffff",
+                "primary-container": "#002347",
+                "on-tertiary-container": "#fe404e",
+                "tertiary": "#240002",
+                "on-surface-variant": "#43474e",
+                "primary-fixed": "#d4e3ff",
+                "primary-fixed-dim": "#adc8f5",
+                "surface-container-high": "#dce9ff",
+                "outline": "#74777f",
+                "secondary-container": "#dfe0e0",
+                "on-secondary-fixed-variant": "#454747",
+                "on-error": "#ffffff",
+                "inverse-on-surface": "#eaf1ff"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "unit-xl": "48px",
+                "unit-lg": "24px",
+                "gutter": "24px",
+                "unit-sm": "8px",
+                "unit-md": "16px",
+                "margin-desktop": "48px",
+                "unit-xs": "4px",
+                "margin-mobile": "16px",
+                "container-max": "1280px"
+        },
+        "fontFamily": {
+                "label-md": [
+                        "Public Sans"
+                ],
+                "label-sm": [
+                        "Public Sans"
+                ],
+                "headline-xl-mobile": [
+                        "Public Sans"
+                ],
+                "headline-lg": [
+                        "Public Sans"
+                ],
+                "headline-md": [
+                        "Public Sans"
+                ],
+                "body-lg": [
+                        "Public Sans"
+                ],
+                "headline-xl": [
+                        "Public Sans"
+                ],
+                "body-md": [
+                        "Public Sans"
+                ],
+                "headline-sm": [
+                        "Public Sans"
+                ]
+        },
+        "fontSize": {
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-xl-mobile": [
+                        "36px",
+                        {
+                                "lineHeight": "44px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-xl": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-sm": [
+                        "20px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "600"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased">
+<!-- TopNavBar Component -->
+<header class="bg-surface dark:bg-primary-container z-50 transition-colors duration-200 ease-in-out shadow-sm w-full sticky top-0">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
+<!-- Brand Logo -->
+<a class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed flex items-center gap-2" href="#">
+<span class="material-symbols-outlined fill text-[28px]">shield</span>
+                MENWA POLINEMA
+            </a>
+<!-- Trailing Content -->
+<div class="flex items-center gap-unit-lg">
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex items-center gap-unit-lg">
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors py-2" href="#">BERANDA</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors py-2" href="#">PROFIL</a>
+<!-- Active Item: KEGIATAN -->
+<a class="font-label-md text-label-md uppercase tracking-wider text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1" href="#">KEGIATAN</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors py-2" href="#">PENDAFTARAN</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors py-2" href="#">KONTAK</a>
+</nav>
+<!-- Mobile Menu Toggle -->
+<button aria-label="Open menu" class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-unit-xl">
+<!-- Page Header -->
+<div class="mb-unit-xl">
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-background mb-unit-sm">Program Kerja &amp; Kegiatan</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+                Dokumentasi resmi seluruh program kerja dan kegiatan operasional yang diselenggarakan oleh Resimen Mahasiswa Politeknik Negeri Malang dalam rangka pembinaan, pengabdian, dan peningkatan kedisiplinan.
+            </p>
+</div>
+<!-- Activity Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1: Expo Kelembagaan -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col transition-transform hover:-translate-y-1 hover:shadow-md duration-300">
+<div class="relative w-full h-56 bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="A professional university student expo booth showcasing an official student regiment organization. Members in neat, official dark navy and white uniforms are standing behind a well-organized display table. The lighting is bright and modern, set within a large indoor university hall. The atmosphere is engaging, disciplined, and inviting, reflecting a high-standard institutional event." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ8QoKIbmw8PpjWOTtsR6s9wnZ1pkfoW51An2ednLKO4sv5XHDKRAY9Oo__ZN_KTdeH4SYzOHrAOfBdD5kdX7cg7ogD7LaICjwjqJArf2NaP0tmPb6dkncttiRTL5JgrK0bkRwdaKX1ZNe9Oiv8oidBrni2jFTIPFp75LvKh9dPuKdVY0m0y2ifze-atIvbwNUm62t2PXlsdE_4pkMSjG5XJ8qpnfv5Gaw-cP0G_CcVUKRQGsDhS1k"/>
+<div class="absolute top-4 left-4 bg-primary-container text-on-primary text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-sm">2023/2024</div>
+</div>
+<div class="p-unit-lg flex flex-col flex-grow">
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-unit-xs">Expo Kelembagaan</h2>
+<div class="font-label-sm text-label-sm text-secondary flex items-center gap-1 mb-unit-sm">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span>
+                        Agustus 2023
+                    </div>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-unit-lg line-clamp-3">
+                        Pengenalan organisasi Resimen Mahasiswa kepada mahasiswa baru melalui pameran kelembagaan tingkat kampus untuk menarik minat pendaftaran anggota baru.
+                    </p>
+<a class="inline-flex items-center justify-center px-4 py-2 bg-transparent border border-primary text-primary font-label-md text-label-md uppercase tracking-wider rounded transition-colors hover:bg-surface-container-low w-full group" href="#">
+                        Lihat Detail
+                        <span class="material-symbols-outlined text-[18px] ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 2: Open Recruitment -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col transition-transform hover:-translate-y-1 hover:shadow-md duration-300">
+<div class="relative w-full h-56 bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="A serious, formal university recruitment registration desk for an official student regiment. Students in clean, disciplined attire are filling out forms while official regiment members in dark navy uniforms assist them. The setting is a structured indoor space with bright, natural lighting and a clean, corporate-modern aesthetic. The mood is professional and organized." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHYcbnWgRXftw_dio6wbYcHQfkrBWtQTOHFUqQc4kRepjBnwqce4ltmB9UVgHxsOqzCjz_iHcnR7b4wLegrBG64zD7PHCMp5FxM6tvbQ8w5LtA5454zlP99Vk2hHYJnGDiqeEzeF-bHmNB8wndOacJEIXAH7PW7Dya4PPdYMtbxjF09fr8auQJH0PW8irtuW2zB3WcZJgSxI4N9xGCpvtncoqf5LIiYWJXc9rlV9KTKgEMi4iSSN-7"/>
+<div class="absolute top-4 left-4 bg-primary-container text-on-primary text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-sm">2023/2024</div>
+</div>
+<div class="p-unit-lg flex flex-col flex-grow">
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-unit-xs">Open Recruitment</h2>
+<div class="font-label-sm text-label-sm text-secondary flex items-center gap-1 mb-unit-sm">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span>
+                        September 2023
+                    </div>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-unit-lg line-clamp-3">
+                        Proses pendaftaran dan seleksi administrasi, fisik, serta mental bagi calon anggota baru Resimen Mahasiswa Politeknik Negeri Malang angkatan terbaru.
+                    </p>
+<a class="inline-flex items-center justify-center px-4 py-2 bg-transparent border border-primary text-primary font-label-md text-label-md uppercase tracking-wider rounded transition-colors hover:bg-surface-container-low w-full group" href="#">
+                        Lihat Detail
+                        <span class="material-symbols-outlined text-[18px] ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 3: PAM Wisuda -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col transition-transform hover:-translate-y-1 hover:shadow-md duration-300">
+<div class="relative w-full h-56 bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="Student regiment members in full, immaculate dark navy and white ceremonial uniforms providing structured security and protocol assistance at a grand university graduation ceremony. They stand at attention along a clear pathway in a large, brightly lit auditorium. The scene communicates discipline, respect, and institutional authority in a modern collegiate setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_jf2Jwd6Mrr-5IhWdqFYk9chLN2QqP4KSv5yhu37ceoVPSlwlx5sIG4RL90C2_zvEaF1NAhMwEI74daZATufd8Tf-oe44Zpr3eDi9ISUrK1FvilQty1zdhmZJyJoL5nXDp7tdldrXcXH0g4uQH_50RP7pky5k6nw-RNrUPbbOWQcatp-UJCSLf5XAP6wzTR7q6tyFYoX5lT0RRTQfz8145_w3NHwMxv-DxmRkyktSvREJivtNosF2"/>
+<div class="absolute top-4 left-4 bg-primary-container text-on-primary text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-sm">RUTIN</div>
+</div>
+<div class="p-unit-lg flex flex-col flex-grow">
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-unit-xs">PAM Wisuda</h2>
+<div class="font-label-sm text-label-sm text-secondary flex items-center gap-1 mb-unit-sm">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span>
+                        Oktober 2023
+                    </div>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-unit-lg line-clamp-3">
+                        Tugas pengamanan dan pengaturan ketertiban dalam rangkaian acara Wisuda Politeknik Negeri Malang untuk memastikan kelancaran dan kekhidmatan acara.
+                    </p>
+<a class="inline-flex items-center justify-center px-4 py-2 bg-transparent border border-primary text-primary font-label-md text-label-md uppercase tracking-wider rounded transition-colors hover:bg-surface-container-low w-full group" href="#">
+                        Lihat Detail
+                        <span class="material-symbols-outlined text-[18px] ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 4: PAM Upacara Hari Nasional -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col transition-transform hover:-translate-y-1 hover:shadow-md duration-300">
+<div class="relative w-full h-56 bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="A highly disciplined student regiment formation standing at strict attention during an outdoor national day flag ceremony on a university campus. They wear formal dark navy and white uniforms. The lighting is bright, clear morning sunlight casting sharp shadows. The mood is patriotic, serious, and highly organized, emphasizing institutional pride." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAso9GJRVNg2nkj21SwQpr1r5dMZ86hCdVh3mKtg43UaCAm3zrqezUoAGR6gYRElsf7f7oxRyx-WiIEVQ6t4ROKvcbJlO8_tfxf3cQ40i1s-hbPm6rkPGwuWAg1FOkV8Fk9Qs7UKDTnvflzc1NXguXoX2vBqLze3csJLfTjWc6iu6YoHoRdk1GKWQgMT_oXG6eVqfAHoHBnL6KbgFk8AUpIOwS97b-IyZsnGiMxcGTY1ikgwVOYuANt"/>
+<div class="absolute top-4 left-4 bg-primary-container text-on-primary text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-sm">RUTIN</div>
+</div>
+<div class="p-unit-lg flex flex-col flex-grow">
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-unit-xs">PAM Upacara Hari Nasional</h2>
+<div class="font-label-sm text-label-sm text-secondary flex items-center gap-1 mb-unit-sm">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span>
+                        Sepanjang Tahun
+                    </div>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-unit-lg line-clamp-3">
+                        Keterlibatan aktif sebagai petugas dan tim pengamanan dalam setiap upacara peringatan Hari Besar Nasional di lingkungan kampus.
+                    </p>
+<a class="inline-flex items-center justify-center px-4 py-2 bg-transparent border border-primary text-primary font-label-md text-label-md uppercase tracking-wider rounded transition-colors hover:bg-surface-container-low w-full group" href="#">
+                        Lihat Detail
+                        <span class="material-symbols-outlined text-[18px] ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 5: Pradiksar -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col transition-transform hover:-translate-y-1 hover:shadow-md duration-300">
+<div class="relative w-full h-56 bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="A group of university student regiment trainees participating in an organized physical training session in a structured outdoor environment. They are wearing matching athletic gear in dark navy tones. Instructors in official uniforms are observing carefully. The lighting is bright daylight. The scene emphasizes discipline, teamwork, and rigorous institutional preparation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuXObu3Zqmd0jFJUmKZ-3JjkfcdWHNUh2VOit1pF-6QJ445hN_0753U7anj1N3fLNcR5ezjiYa8j9PhRm11oyup0fBNmXN3U0h-a9nWYV_m0F5-Xnfwe50ggcVK4vA1hclhj7vkxlJiS2-774IYKOZJNrMWdH34xgZRdb65oWTDte7pj6Nm8v15n7RmexBgfesX6WMZfCOhLGd3ZQHDeJ_-pLtGCe5DP1_YnB2MaMStQ2VkPS2qWGL"/>
+<div class="absolute top-4 left-4 bg-primary-container text-on-primary text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-sm">PENDIDIKAN</div>
+</div>
+<div class="p-unit-lg flex flex-col flex-grow">
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-unit-xs">Pradiksar</h2>
+<div class="font-label-sm text-label-sm text-secondary flex items-center gap-1 mb-unit-sm">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span>
+                        November 2023
+                    </div>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-unit-lg line-clamp-3">
+                        Pendidikan Pendahuluan Dasar Resimen Mahasiswa, tahap pembinaan awal fisik dan mental sebelum mengikuti pendidikan militer dasar sesungguhnya.
+                    </p>
+<a class="inline-flex items-center justify-center px-4 py-2 bg-transparent border border-primary text-primary font-label-md text-label-md uppercase tracking-wider rounded transition-colors hover:bg-surface-container-low w-full group" href="#">
+                        Lihat Detail
+                        <span class="material-symbols-outlined text-[18px] ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Card 6: Diksar -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col transition-transform hover:-translate-y-1 hover:shadow-md duration-300">
+<div class="relative w-full h-56 bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="An intense, focused field training exercise for a university student regiment in a rugged outdoor setting. Trainees are engaging in disciplined formation drills under clear, bright skies. The visual style is documentary and realistic, highlighting the serious, institutional nature of the physical and mental training program, maintaining a cohesive corporate-modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB9X78kmoznimDkOd4swfcqZaWbdFLwhjqC46sQz-e9KlVZIz1xlw8PTAbRfIRammLYUFNdoMv2cjOg0l7CrvSyvhXQSElpe-OE8obr-E9qTfzpUoA2RUk0bzj_7kVcbV7vJTP5rOiVl4TlmOsFDz241sXgxZjgYz6Ix66PBKZKS4ZRgyfAwADQndZQhNBPyehEV9-Mcjpv3J-64-RzWGgP9KE8Mc-CnXV9S0oAqR-7hsM1N6wjtav"/>
+<div class="absolute top-4 left-4 bg-primary-container text-on-primary text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-sm">PENDIDIKAN</div>
+</div>
+<div class="p-unit-lg flex flex-col flex-grow">
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-unit-xs">Diksar (Pendidikan Dasar)</h2>
+<div class="font-label-sm text-label-sm text-secondary flex items-center gap-1 mb-unit-sm">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span>
+                        Desember 2023
+                    </div>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-unit-lg line-clamp-3">
+                        Pendidikan Dasar kemiliteran resmi yang bekerjasama dengan instansi militer terkait untuk mengesahkan status keanggotaan penuh Resimen Mahasiswa.
+                    </p>
+<a class="inline-flex items-center justify-center px-4 py-2 bg-transparent border border-primary text-primary font-label-md text-label-md uppercase tracking-wider rounded transition-colors hover:bg-surface-container-low w-full group" href="#">
+                        Lihat Detail
+                        <span class="material-symbols-outlined text-[18px] ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="bg-primary dark:bg-primary-container w-full mt-auto border-t border-primary-container dark:border-primary">
+<div class="max-w-container-max mx-auto px-margin-desktop py-unit-xl grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Brand & Copyright -->
+<div class="flex flex-col gap-unit-md">
+<div class="font-headline-sm text-headline-sm font-bold text-on-primary flex items-center gap-2">
+<span class="material-symbols-outlined fill text-[28px]">shield</span>
+                    MENWA POLINEMA
+                </div>
+<p class="font-body-md text-body-md text-on-primary-container dark:text-primary-fixed-dim">
+                    © 2024 Resimen Mahasiswa Politeknik Negeri Malang. All Rights Reserved.
+                </p>
+</div>
+<!-- Quick Links -->
+<div class="flex flex-col gap-unit-sm">
+<h3 class="font-label-md text-label-md uppercase tracking-wider text-on-primary mb-2 opacity-70">Tautan Penting</h3>
+<nav class="flex flex-col gap-2">
+<a class="font-body-md text-body-md text-on-primary-container dark:text-primary-fixed-dim hover:text-on-primary transition-colors duration-200" href="#">Tentang Kami</a>
+<a class="font-body-md text-body-md text-on-primary-container dark:text-primary-fixed-dim hover:text-on-primary transition-colors duration-200" href="#">Struktur Organisasi</a>
+<a class="font-body-md text-body-md text-on-primary-container dark:text-primary-fixed-dim hover:text-on-primary transition-colors duration-200" href="#">Galeri Kegiatan</a>
+<a class="font-body-md text-body-md text-on-primary-container dark:text-primary-fixed-dim hover:text-on-primary transition-colors duration-200" href="#">Hubungi Kami</a>
+<a class="font-body-md text-body-md text-on-primary-container dark:text-primary-fixed-dim hover:text-on-primary transition-colors duration-200" href="#">Prasyarat</a>
+</nav>
+</div>
+<!-- Contact Info -->
+<div class="flex flex-col gap-unit-sm">
+<h3 class="font-label-md text-label-md uppercase tracking-wider text-on-primary mb-2 opacity-70">Markas Komando</h3>
+<p class="font-body-md text-body-md text-on-primary-container dark:text-primary-fixed-dim flex items-start gap-2">
+<span class="material-symbols-outlined text-[20px] mt-1 shrink-0">location_on</span>
+                    Gedung UKM, Politeknik Negeri Malang, Jl. Soekarno Hatta No.9, Jatimulyo, Kec. Lowokwaru, Kota Malang, Jawa Timur 65141
+                </p>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,25 +1,16 @@
-import {
-    collection,
-    getDocs,
-    orderBy,
-    query,
-} from "firebase/firestore";
+import { members, getMemberBySlug } from "@/data/members";
+import type { Member } from "@/types";
 
-import { db } from "@/lib/firebase";
-import { OrganizationMember } from "../types/organization";
+/**
+ * Placeholder service layer untuk data organisasi.
+ * Saat ini membaca dari src/data/members.ts (static).
+ * Ketika Firebase/Firestore diaktifkan, ganti implementasi di sini
+ * tanpa mengubah komponen — collection name tetap "members" sesuai instruksi.
+ */
+export async function getAllMembers(): Promise<Member[]> {
+  return members;
+}
 
-export async function getOrganizationMembers() {
-    const q = query(
-        collection(db, "members"),
-        orderBy("order", "asc")
-    );
-
-    const snapshot = await getDocs(q);
-
-    const members: OrganizationMember[] = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...(doc.data() as Omit<OrganizationMember, "id">),
-    }));
-
-    return members;
+export async function getMember(slug: string): Promise<Member | undefined> {
+  return getMemberBySlug(slug);
 }
